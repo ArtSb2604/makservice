@@ -4953,3 +4953,116 @@ th {
     right: 0;
     top: 0;
 }
+
+.modal-feedback {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+    display: none;
+}
+
+.modal-feedback-block {
+    background: #00569C;
+    width: 148.7rem;
+    height: 74.5rem;
+    padding: 5.4rem 6.9rem;
+    box-sizing: border-box;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-feedback-group {
+    border: 2px solid #FBFBFB;
+    height: 100%;
+    position: relative;
+    padding: 0 10.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.5rem; 
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(16,62,132,1) 0%, rgba(16,62,132,1) 50%, rgba(252,176,69,0) 100%), url('../images/forma.png') no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.modal-feedback-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.modal-feedback-title h1 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.modal-feedback-title p {
+    color: #FBFBFB;
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 46rem;
+}
+
+.modal-feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 46rem;
+}
+
+.modal-feedback-form input {
+    padding: 2.5rem 4.5rem;
+    background: none;
+    border: 1px solid #FBFBFB;
+    color: #FBFBFB;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    outline: none;
+}
+
+.modal-feedback-form button {
+    width: 100%;
+    padding: 2.5rem 4.5rem;
+    background: #fff;
+    border: none;
+    outline: none;
+    color: #103E84;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.modal-feedback-close svg {
+    width: 10rem;
+    height: 10rem;
+}
+
+.modal-feedback-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
