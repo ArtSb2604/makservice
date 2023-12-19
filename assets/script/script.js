@@ -41,7 +41,16 @@ var productSlider = new Swiper(".product-slider", {
   
 });
 
+const rem = parseFloat($('html').css('font-size'));
 
+var swiper_rec = new Swiper(".recommendations-swiper", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: rem * 10,
+  navigation: {
+    nextEl: ".recommendations-next",
+  },
+});
 
 const spaceHolder = document.querySelector('.space-holder');
 const horizontal = document.querySelector('.horizontal');
@@ -61,4 +70,72 @@ window.addEventListener('scroll', () => {
 
 window.addEventListener('resize', () => {
   spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
+});
+
+window.addEventListener('resize', () => {
+  spaceHolder.style.height = `${calcDynamicHeight(horizontal)}px`;
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Получаем элемент с классом "main-info"
+  var aboutSection = document.querySelector('.main-info-block');
+
+  // Создаем новый экземпляр Intersection Observer
+  var observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry) {
+      // Если секция "about" видима
+      if (entry.isIntersecting) {
+        // Получаем все элементы с классом "odometer" внутри текущей видимой секции
+        var odometers = entry.target.querySelectorAll('.odometer');
+
+        // Устанавливаем значения в зависимости от идентификатора
+        odometers.forEach(function (odometer) {
+          if (odometer.id === 'odometer-1') {
+            odometer.innerHTML = 70;
+          } else {
+            odometer.innerHTML = 17;
+          }
+        });
+
+        // Прекращаем отслеживать видимость, так как код выполнился
+        observer.disconnect();
+      }
+    });
+  });
+
+  // Начинаем отслеживать видимость секции "about"
+  observer.observe(aboutSection);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  let lastScrollTop = 0;
+  const blocks = document.querySelectorAll('.digit-decor');
+  const initialPositions = Array.from(blocks, block => block.getBoundingClientRect().top + window.scrollY - 700); // Вычесть 300 для начала анимации раньше
+
+  window.addEventListener('scroll', function () {
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+
+      blocks.forEach(function (block, index) {
+          const distance = st - initialPositions[index];
+
+          // Проверяем, находится ли блок в видимой области
+          const isInViewport = block.getBoundingClientRect().top <= window.innerHeight && block.getBoundingClientRect().bottom >= 0;
+          if (isInViewport) {
+              const translateY = Math.max(0, Math.min(distance / 10, 200)); // Подстройте коэффициент деления для более плавного/быстрого движения
+
+              if (distance > 0) {
+                  // Прокрутка вниз
+                  block.style.transform = 'translateY(' + translateY + 'px)';
+              } else {
+                  // Прокрутка вверх
+                  block.style.transform = 'translateY(' + translateY + 'px)';
+              }
+          } 
+      });
+
+      lastScrollTop = st;
+  });
 });
