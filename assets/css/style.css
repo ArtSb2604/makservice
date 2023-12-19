@@ -4380,6 +4380,7 @@ th {
 .repair-main-img {
     flex: 1;
     position: relative;
+    background: url(../images/ea177a548553897eb5e87de3bb4441c7.png);
 }
 
 .repair-main-img img {
@@ -4743,6 +4744,10 @@ th {
     display: flex;
     flex-direction: column;
     gap: 3.5rem;
+}
+
+.recommendations-swiper .swiper-button-next {
+    display: none;
 }
 
 .recommendations__elem-bottom strong {
