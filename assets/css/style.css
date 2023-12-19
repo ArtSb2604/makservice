@@ -970,7 +970,7 @@ line-height: normal;
     left: 0;
     width: 100%;
     height: 0;
-    background: #00569C;
+    background: #1F85D9;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     z-index: -1;
@@ -4765,3 +4765,191 @@ th {
     line-height: normal;
 }
 
+.modal-login {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background: #fff;
+    z-index: 9999999;
+    display: none;
+}
+
+.modal-login svg {
+    width: 7.8rem;
+    height: 6.8rem;
+}
+
+.modal-login-block {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.modal-login-left, .modal-login-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.modal-login-left {
+    background: #00569C;
+    position: relative;
+}
+
+.modal-login-left img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.modal-login-left .logo {
+    z-index: 999;
+    display: flex;
+    gap: 1rem;
+}
+
+.modal-login-left .logo h1 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.5rem; /* 97.222% */
+}
+
+.modal-login-left .logo p {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 88.235% */
+    letter-spacing: .4rem;
+}
+
+.modal-login-title h1 {
+    color: #0D0D0E;
+    font-family: Montserrat;
+    font-size: 6.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.modal-login-title p {
+    color: #0D0D0E;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.modal-login-right-block {
+    width: 76rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.modal-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.modal-login-form .form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.modal-login-form .form-input input {
+    background: #F3F3F3;
+    border: none;
+    outline: none;
+    padding: 2rem 4.1rem 1.6rem 4.1rem;
+    color: #979797;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.modal-login-form .form-button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+
+.modal-login-form .form-button button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35.5rem;
+    height: 6rem;
+    background: #00569C;
+    box-shadow: 0px 0px 82.166px 0px rgba(0, 86, 156, 0.50);
+    border: none;
+    outline: none;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.modal-login-form .form-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35.5rem;
+    height: 6rem;
+    border: 1px solid #00569C;
+    box-shadow: 0px 0px 82.166px 0px rgba(0, 86, 156, 0.50);
+    color: #00569C;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.modal-login-form p {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 40rem;
+    margin: auto;
+}
+
+.modal-login-form p a {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.modal-login-close svg {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    right: 0;
+    top: 0;
+}
