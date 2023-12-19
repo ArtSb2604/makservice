@@ -5007,7 +5007,7 @@ th {
     gap: 3.5rem; 
     box-sizing: border-box;
     background: linear-gradient(90deg, rgba(16,62,132,1) 0%, rgba(16,62,132,1) 50%, rgba(252,176,69,0) 100%), url('../images/forma.png') no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
     background-position: right;
 }
 
