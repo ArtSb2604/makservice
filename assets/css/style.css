@@ -42,6 +42,11 @@ header hr {
 .header-block_logo {
     display: flex;
     padding: 3.1rem 4.6rem 3rem 10rem;
+    width: 48rem;
+    max-width: 48rem;
+    min-width: 48rem;
+    box-sizing: border-box;
+    border-right: 0.1rem solid #fff;
 }
 
 .header-block_logo a {
@@ -83,6 +88,8 @@ letter-spacing: .4rem;
     align-items: center;
     gap: 1rem;
     width: 32rem;
+    border-right: 0.1rem solid #fff;
+    box-sizing: border-box;
 }
 
 .header-block_maps p {
@@ -103,6 +110,8 @@ letter-spacing: .4rem;
     justify-content: center;
     align-items: center;
     width: 48rem;
+    border-right: 0.1rem solid #fff;
+    box-sizing: border-box;
 }
 
 .search-input {
@@ -145,6 +154,8 @@ letter-spacing: .4rem;
     align-items: center;
     gap: 1rem;
     width: 32rem;
+    border-right: 0.1rem solid #fff;
+    box-sizing: border-box;
 }
 
 .header-block_phone p {
@@ -172,6 +183,11 @@ letter-spacing: .4rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-right: 0.1rem solid #fff;
+}
+
+.header-block_account__elem:nth-child(2) {
+    border: none;
 }
 .header-block_account_bottom {
     border-top: 1px solid #FFF;
@@ -210,6 +226,16 @@ font-size: 1.6rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+border-right: 0.1rem solid #fff;
+box-sizing: border-box;
+}
+
+.header-block_account {
+    box-sizing: border-box;
+}
+
+.header-block_bottom__elem:nth-child(6) {
+    border: none !important;
 }
 
 .header-black p, .header-black h1, .header-black a {
@@ -311,6 +337,13 @@ line-height: normal;
     color: #fff;
     background: #fbfbfb2e;
 }
+
+.header-black .header-block_logo, .header-black .header-block_search, .header-black .header-block_bottom__elem, .header-black .header-block_maps,
+.header-black .header-block_phone {
+    border-right: 0.1rem solid #000;
+}
+
+
 
 /* main banner 8*/
 
@@ -4761,6 +4794,7 @@ th {
     flex-direction: column;
     gap: 3.5rem;
     padding: 0 10rem;
+    overflow: hidden;
 }
 
 .refill-recommendations h4 {
@@ -5186,4 +5220,12 @@ th {
 
 .card-btn-animate:hover svg path {
     stroke: #fff;
+}
+
+.btn-animate {
+    transition: all 0.5s;
+}
+.btn-animate:hover {
+  box-shadow: 0px 0px 82.166px 0px rgba(0, 86, 156, 0.50);
+  transform: scale(1.1);
 }
