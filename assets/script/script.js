@@ -1,5 +1,12 @@
 
 
+$('.repair-main-img').ripples({
+  resolution: 256,
+  dropRadius: 20,
+  perturbance: 0.04,
+  imageUrl: null
+});
+
 const mySwiper = new Swiper('.swiper-category', {
   spaceBetween: 30,
   initialSlide: 0,
@@ -124,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
           // Проверяем, находится ли блок в видимой области
           const isInViewport = block.getBoundingClientRect().top <= window.innerHeight && block.getBoundingClientRect().bottom >= 0;
           if (isInViewport) {
-              const translateY = Math.max(0, Math.min(distance / 10, 200)); // Подстройте коэффициент деления для более плавного/быстрого движения
+              const translateY = Math.max(0, Math.min(distance / 6, 200)); // Подстройте коэффициент деления для более плавного/быстрого движения
 
               if (distance > 0) {
                   // Прокрутка вниз
@@ -139,3 +146,4 @@ document.addEventListener('DOMContentLoaded', function () {
       lastScrollTop = st;
   });
 });
+

@@ -254,6 +254,63 @@ line-height: normal;
     height: 100%;
 }
 
+.header-black .logo svg circle, .header-black .logo svg path,
+.header-black  .header-block_account svg {
+    stroke: #000;
+    fill: #000;
+}
+
+.header-black svg path {
+    stroke: #000;
+}
+
+.header-black .header-btn-animate:hover {    
+    height: 100%;
+    color: #fff;
+}
+
+.header-black .header-block_account_bottom:hover {    
+    height: 6.3rem;
+}
+
+.header-black .header-btn-animate {
+    box-sizing: border-box;
+}
+
+.header-black .header-block_account__elem:hover {    
+    height: auto;
+}
+
+.header-black .header-btn-animate:hover svg circle {
+    fill: #fff;
+}
+
+.header-black .header-btn-animate:hover svg path, .header-black .header-block_account .header-btn-animate:hover svg  {
+    stroke: #fff;
+}
+
+.header-black .header-btn-animate:hover .logo svg circle, .header-black .header-block_account .header-btn-animate:hover svg {
+    fill: #fff;
+}
+
+.header-black .header-btn-animate:hover .logo svg circle, .header-black .header-btn-animate:hover .logo svg path  {
+    stroke: #fff;
+    fill: #fff;
+}
+
+.header-black .header-btn-animate:hover .logo p, .header-black .header-btn-animate:hover .logo h1 {
+    color: #FFF;
+}
+
+.header-black .header-btn-animate:hover p {
+    color: #fff;
+}
+
+.header-black .header-btn-animate:hover input {
+    color: #fff;
+    background: #fbfbfb2e;
+}
+
 /* main banner 8*/
 
 .main-banner {
@@ -696,7 +753,7 @@ line-height: normal;
     left: 0;
     width: 100%;
     height: 0;
-    background: #00569C;
+    background: #fff;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     z-index: -1;
@@ -707,7 +764,7 @@ line-height: normal;
 }
 
 .marquee .elem:hover img {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(0);
 }
 
 .marquee-1 .marquee {
@@ -4228,31 +4285,34 @@ th {
 
 .adv-img-1 {
     position: absolute;
-    width: 83.1rem;
-    height: 32.9rem;
-    transform: rotate(25.479deg);
     filter: blur(4px);
     object-fit: contain;
     left: -37rem;
-    top: 10rem;
+    top: 15rem;
+}
+
+.adv-img-1 img {
+    width: 83.1rem;
+    height: 32.9rem;
+    transform: rotate(25.479deg);
 }
 
 .adv-img-2 {
     position: absolute;
-    width: 83.1rem;
-    height: 32.9rem;
-    transform: rotate(32.168deg);
     filter: blur(4px);
     object-fit: contain;
     right: -30rem;
     top: 38rem;
 }
 
+.adv-img-2 img {
+    width: 83.1rem;
+    height: 32.9rem;
+    transform: rotate(32.168deg);
+}
+
 .adv-img-3 {
     position: absolute;
-    width: 71.3rem;
-    height: 28.2rem;
-    transform: rotate(-32.277deg);
     filter: blur(4px);
     object-fit: cover;
     left: -20rem;
@@ -4260,15 +4320,24 @@ th {
     z-index: -1;
 }
 
+.adv-img-3 img {
+    width: 71.3rem;
+    height: 28.2rem;
+    transform: rotate(-32.277deg);
+}
+
 .adv-img-4 {
     position: absolute;
-    width: 53.1rem;
-    height: 32.5rem;
-    transform: rotate(7.881deg);
     filter: blur(4px);
     object-fit: contain;
     bottom: 5rem;
     right: -14.4rem;
+}
+
+.adv-img-4 img {
+    width: 53.1rem;
+    height: 32.5rem;
+    transform: rotate(7.881deg);
 }
 
 /* benefit */
@@ -4380,7 +4449,7 @@ th {
 .repair-main-img {
     flex: 1;
     position: relative;
-    background: url(../images/ea177a548553897eb5e87de3bb4441c7.png);
+    background-image: url(../images/ea177a548553897eb5e87de3bb4441c7.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 91.5rem;
@@ -5082,4 +5151,38 @@ th {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.card-btn-animate {
+    position: relative;
+    z-index: 999;
+}
+
+.card-btn-animate:after {
+    content: '';
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #00569C;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.card-btn-animate:hover:after{    
+    height: 100%;
+}
+
+.card-btn-animate:hover h4, .card-btn-animate:hover p, .card-btn-animate:hover h1, .card-btn-animate:hover a, .card-btn-animate:hover div {
+    color: #fff;
+}
+
+.card-btn-animate:hover a, .card-btn-animate:hover .number {
+    border: 1px solid #fff;
+}
+
+.card-btn-animate:hover svg path {
+    stroke: #fff;
 }
