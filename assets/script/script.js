@@ -1,11 +1,6 @@
 
 
-$('.repair-main-img').ripples({
-  resolution: 256,
-  dropRadius: 20,
-  perturbance: 0.04,
-  imageUrl: null
-});
+
 
 const mySwiper = new Swiper('.swiper-category', {
   spaceBetween: 30,
@@ -97,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (entry.isIntersecting) {
         // Получаем все элементы с классом "odometer" внутри текущей видимой секции
         var odometers = entry.target.querySelectorAll('.odometer');
-
         // Устанавливаем значения в зависимости от идентификатора
         odometers.forEach(function (odometer) {
           if (odometer.id === 'odometer-1') {
@@ -131,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
           // Проверяем, находится ли блок в видимой области
           const isInViewport = block.getBoundingClientRect().top <= window.innerHeight && block.getBoundingClientRect().bottom >= 0;
           if (isInViewport) {
-              const translateY = Math.max(0, Math.min(distance / 6, 200)); // Подстройте коэффициент деления для более плавного/быстрого движения
+              const translateY = Math.max(0, Math.min(distance / 4, 200)); // Подстройте коэффициент деления для более плавного/быстрого движения
 
               if (distance > 0) {
                   // Прокрутка вниз
